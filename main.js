@@ -131,7 +131,7 @@ function drawCenterMessage(text, color) {
   ctx.fillText(text, canvas.width / 2, canvas.height / 2);
 
   ctx.font = "16px Arial";
-  ctx.fillText("Press any key", canvas.width / 2, canvas.height / 2 + 40);
+  // ctx.fillText("Press any key", canvas.width / 2, canvas.height / 2 + 40);
 
   // 戻す（他描画に影響しないように）
   ctx.textAlign = "start";
@@ -177,13 +177,13 @@ function update() {
   }
 
   if (gameState === "gameover") {
-    drawCenterMessage("💀", "#ff3333");
+    drawCenterMessage("", "#ff3333");
     requestAnimationFrame(update);
     return;
   }
 
   if (gameState === "clear") {
-    drawCenterMessage("🎉", "#00ffcc");
+    // drawCenterMessage("🎉", "#00ffcc");
     requestAnimationFrame(update);
     return;
   }
